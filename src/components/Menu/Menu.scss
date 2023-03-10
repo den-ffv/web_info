@@ -1,0 +1,30 @@
+@import '../../style/vars';
+.menu {
+    display: none;
+    position: absolute;
+    top: 93px;
+    background: #fff;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.10);
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu__content{
+padding: 0px 0px 30px 0px;
+    ul{
+        padding: 30px 80px 50px 80px;
+        text-align: center;
+        li{
+            margin: 20px 0px 0px 0px;
+        }
+    }
+
+    a{
+        font-size: $fz-text;
+        color: $color-basic;
+    }
+}

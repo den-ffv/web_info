@@ -1,0 +1,69 @@
+@import '../../style/vars';
+.header{
+    border-bottom: 1px solid #bcbcbc;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 10px 20px 10px;
+}
+.header-wrapper{
+    display: flex;
+    align-items:center;
+}
+.header__btn{
+    // display: none;
+    margin: 0px 30px 0px 0px;
+    button{
+       width: 30px;
+       height: 20px;
+       border-top: 3px solid #000;  
+       border-bottom: 3px solid #000;
+       position: relative;
+       background: #fff;
+    }
+    button::before{
+        content: '';
+        width: 30px;
+        height: 3px;
+        top: 40%;
+        left: 0;
+        position: absolute;
+        background: #000;
+     }
+}
+.logo{
+    font-size: 25px;
+}
+.nav{
+    ul {
+        margin: 0px 50px 0px 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+        font-size: $fz-text;
+       
+    }
+    &__link{
+            padding: 10px;
+            color: $color-basic;
+        }
+}
+.auth-btn{
+    text-transform: uppercase;
+    padding: 10px 20px ;
+}
+.log-in{
+    border: 1px solid  $color-basic;
+    color:  $color-basic;
+}
+.sign-in{
+    
+    border: 1px solid $color-one;
+    background: $color-one;
+    color: $color-thre;
+}
