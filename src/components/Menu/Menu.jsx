@@ -1,12 +1,12 @@
 import React from "react";
-import ShowDate from "../Header/Date/ShowDate";
 import "./Menu.scss";
 
 const Menu = ({ active, setMenuActive }) => {
+
+
   return (
     <div className={active ? "menu active" : "menu"}>
       <div className="menu__content">
-        {/* <ShowDate /> */}
         <ul>
           <li>
             <a href="/">Головне</a>
@@ -21,13 +21,12 @@ const Menu = ({ active, setMenuActive }) => {
             <a href="/language">Мови</a>
           </li>
         </ul>
-        <div className="auth-content">
-          <a href="" className="auth-btn log-in">
-            log in
-          </a>
-          <a href="" className="auth-btn sign-in">
-            sign in
-          </a>
+        <div className="social-networks">
+            <ul>
+              <li><a href="">Inst</a></li>
+              <li><a href="">Tw</a></li>
+              <li><a href="">Tg</a></li>
+            </ul>
         </div>
       </div>
     </div>

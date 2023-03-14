@@ -1,9 +1,13 @@
 @import '../../style/vars';
 .header{
-    border-bottom: 1px solid #bcbcbc;
+    border-bottom: 1px solid #EAEAEA;
+    margin: 0px 0px 20px 0px;
 }
 
 .header__content {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -15,7 +19,7 @@
     align-items:center;
 }
 .header__btn{
-    // display: none;
+    display: none;
     margin: 0px 30px 0px 0px;
     button{
        width: 30px;
@@ -45,25 +49,50 @@
         justify-content: space-around;
         align-items: center;
         gap: 25px;
-        font-size: $fz-text;
+        font-size: $fz-menu;
        
     }
     &__link{
             padding: 10px;
             color: $color-basic;
         }
+        .active{
+            color: $color-two;
+        }
+}
+.auth-content{
+    display: flex;
+    gap: 25px;
+    align-items:center;
 }
 .auth-btn{
-    text-transform: uppercase;
-    padding: 10px 20px ;
+    padding: 8px 18px ;
+    font-size: $fz-menu;
+    border-radius: 5px;
 }
-.log-in{
-    border: 1px solid  $color-basic;
-    color:  $color-basic;
-}
-.sign-in{
+.sign-up{
     
     border: 1px solid $color-one;
     background: $color-one;
     color: $color-thre;
+}
+@media(max-width: 740px){
+    .header__btn{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+ 
+    .menu-btn__wraper{  
+            display: flex;
+            justify-content: flex-end;
+    }
+    .menu-btn {
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index:2;
+        overflow: hidden;
+    }
 }

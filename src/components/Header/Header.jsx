@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import Home from "../../pages/Home";
 import News from "../../pages/News";
 import Blog from "../../pages/Blog";
 import Language from "../../pages/Language";
 import "./Header.scss";
+import Footer from "../Footer/Footer";
 
 function Header() {
   const [menuActive, setMenuActive] = useState(false);
@@ -14,49 +15,60 @@ function Header() {
     <>
       <header className="header">
         <div className="header__content">
-          <div className="header-wrapper">
+          
             <div className="header__btn">
               <button onClick={() => setMenuActive(!menuActive)}></button>
             </div>
 
             <div className="logo-content">
-              <p className="logo">Logo</p>
+              <p className="logo">Tech Talk</p>
             </div>
-          </div>
+       
 
-          <div className="header-wrapper">
+         
             <div className="nav">
               <ul>
                 <li>
-                  <Link className="nav__link" to="/">Головне</Link>
+                  <NavLink className="nav__link" to="/">
+                    Головне
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="nav__link" to="/news">Новини</Link>
+                  <NavLink className="nav__link" to="/news">
+                    Новини
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="nav__link" to="/blog">Блог</Link>
+                  <NavLink className="nav__link" to="/blog">
+                    Блог
+                  </NavLink>
                 </li>
                 <li>
-                  <Link className="nav__link" to="/language">Мови</Link>
+                  <NavLink className="nav__link" to="/language">
+                    Мови
+                  </NavLink>
                 </li>
               </ul>
             </div>
 
             <div className="auth-content">
-              <a href="" className="auth-btn log-in">log in</a>
-              <a href="" className="auth-btn sign-in">sign in</a>
+              <a href="" className="auth-btn sign-up">
+                Реє
+              </a>
             </div>
-          </div>
+          
           <Menu active={menuActive} setMenuActive={setMenuActive} />
         </div>
-        
       </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/language" element={<Language />} />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/language" element={<Language />} />
+        </Routes>
+        <Footer/>
+      </div>
     </>
   );
 }
